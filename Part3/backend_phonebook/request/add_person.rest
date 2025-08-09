@@ -1,0 +1,10 @@
+//Local
+POST http://localhost:3001/api/persons/ HTTP/1.1
+//Produccion
+//POST https://backend-phonebook-damp-breeze-8660.fly.dev/api/persons/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Lidia Leon",
+    "number": "403-9876543"
+}

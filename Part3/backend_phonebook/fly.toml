@@ -1,0 +1,25 @@
+# fly.toml app configuration file generated for backend-phonebook-damp-breeze-8660 on 2025-07-29T01:41:44+02:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'backend-phonebook-damp-breeze-8660'
+primary_region = 'cdg'
+
+[build]
+
+[env]
+  PORT = "3000" 
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
